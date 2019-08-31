@@ -1736,8 +1736,23 @@ __webpack_require__.r(__webpack_exports__);
       url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
       zoom: 14,
       center: [44.616604, 33.525369],
-      bounds: null
+      bounds: null,
+      markers: {}
     };
+  },
+  watch: {
+    bounds: {
+      handler: 'requestMarkers'
+    },
+    markers: {
+      handler: 'drawGeoJsonLayer'
+    }
+  },
+  mounted: function mounted() {
+    this.bounds = this.calculateBounds();
+  },
+  updated: function updated() {
+    this.bounds = this.calculateBounds();
   },
   methods: {
     zoomUpdated: function zoomUpdated(zoom) {
@@ -1746,16 +1761,39 @@ __webpack_require__.r(__webpack_exports__);
     centerUpdated: function centerUpdated(center) {
       this.center = center;
     },
-    boundsUpdated: function boundsUpdated(bounds) {
-      this.bounds = bounds;
-    }
-  },
-  props: {
-    options: {
-      type: Object,
-      "default": function _default() {
-        return {};
-      }
+    calculateBounds: function calculateBounds() {
+      var map = this.$refs.map.mapObject;
+      return map.getBounds().toBBoxString();
+    },
+    drawGeoJsonLayer: function drawGeoJsonLayer() {
+      var map = this.$refs.map.mapObject;
+      var geojsonMarkerOptions = {
+        radius: 6,
+        fillColor: '#00ff05',
+        color: '#000',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+      };
+      L.geoJSON(this.markers, {
+        pointToLayer: function pointToLayer(feature, latlng) {
+          return L.circleMarker(latlng, geojsonMarkerOptions);
+        },
+        onEachFeature: function onEachFeature(feature, layer) {
+          // does this feature have a property named popupContent?
+          layer.bindPopup(feature.properties.comment);
+        }
+      }).addTo(map);
+    },
+    requestMarkers: function requestMarkers() {
+      var _this = this;
+
+      console.log(this.bounds);
+      axios.get('/api/markers?bbox=' + this.bounds).then(function (response) {
+        _this.markers = response.data;
+      })["catch"](function (error) {
+        console.log(error.response);
+      });
     }
   }
 });
@@ -34172,11 +34210,11 @@ var render = function() {
       _c(
         "l-map",
         {
+          ref: "map",
           attrs: { zoom: _vm.zoom, center: _vm.center },
           on: {
             "update:zoom": _vm.zoomUpdated,
-            "update:center": _vm.centerUpdated,
-            "update:bounds": _vm.boundsUpdated
+            "update:center": _vm.centerUpdated
           }
         },
         [_c("l-tile-layer", { attrs: { url: _vm.url } })],
@@ -60347,6 +60385,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('l-map', vue2_leaflet__WEBPACK_IMPORTED_MODULE_2__["LMap"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('l-tile-layer', vue2_leaflet__WEBPACK_IMPORTED_MODULE_2__["LTileLayer"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('l-marker', vue2_leaflet__WEBPACK_IMPORTED_MODULE_2__["LMarker"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('l-grid-layer', vue2_leaflet__WEBPACK_IMPORTED_MODULE_2__["LGridLayer"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('l-geo-json', vue2_leaflet__WEBPACK_IMPORTED_MODULE_2__["LGeoJson"]);
 delete leaflet__WEBPACK_IMPORTED_MODULE_3__["Icon"].Default.prototype._getIconUrl;
 leaflet__WEBPACK_IMPORTED_MODULE_3__["Icon"].Default.mergeOptions({
   iconRetinaUrl: __webpack_require__(/*! leaflet/dist/images/marker-icon-2x.png */ "./node_modules/leaflet/dist/images/marker-icon-2x.png"),

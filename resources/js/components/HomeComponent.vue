@@ -1,11 +1,11 @@
 <template>
     <div style="height: 100%; width: 100%">
         <l-map
+            ref="map"
             :zoom="zoom"
             :center="center"
             @update:zoom="zoomUpdated"
             @update:center="centerUpdated"
-            @update:bounds="boundsUpdated"
         >
             <l-tile-layer :url="url"></l-tile-layer>
         </l-map>
@@ -20,25 +20,63 @@
                 url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
                 zoom: 14,
                 center: [44.616604, 33.525369],
-                bounds: null
-            };
+                bounds: null,
+                markers: {}
+            }
+        },
+        watch: {
+            bounds: {
+                handler: 'requestMarkers',
+            },
+            markers: {
+                handler: 'drawGeoJsonLayer',
+            },
+        },
+        mounted () {
+            this.bounds = this.calculateBounds()
+        },
+        updated () {
+            this.bounds = this.calculateBounds()
         },
         methods: {
             zoomUpdated (zoom) {
-                this.zoom = zoom;
+                this.zoom = zoom
             },
             centerUpdated (center) {
-                this.center = center;
+                this.center = center
             },
-            boundsUpdated (bounds) {
-                this.bounds = bounds;
-            }
+            calculateBounds () {
+                let map = this.$refs.map.mapObject
+                return map.getBounds().toBBoxString()
+            },
+            drawGeoJsonLayer () {
+                let map = this.$refs.map.mapObject
+                let geojsonMarkerOptions = {
+                    radius: 6,
+                    fillColor: '#00ff05',
+                    color: '#000',
+                    weight: 1,
+                    opacity: 1,
+                    fillOpacity: 0.8,
+                }
+                L.geoJSON(this.markers, {
+                    pointToLayer: function (feature, latlng) {
+                        return L.circleMarker(latlng, geojsonMarkerOptions)
+                    },
+                    onEachFeature: function onEachFeature (feature, layer) {
+                        // does this feature have a property named popupContent?
+                        layer.bindPopup(feature.properties.comment)
+                    },
+                }).addTo(map)
+            },
+            requestMarkers () {
+                console.log(this.bounds)
+                axios.get('/api/markers?bbox=' + this.bounds).then((response) => {
+                    this.markers = response.data
+                }).catch((error) => {
+                    console.log(error.response)
+                })
+            },
         },
-        props: {
-            options: {
-                type: Object,
-                default: () => ({})
-            }
-        }
     }
 </script>

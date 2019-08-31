@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import router from './router';
 
-import { LMap, LTileLayer, LMarker } from 'vue2-leaflet';
+import { LMap, LTileLayer, LMarker, LGridLayer, LGeoJson } from 'vue2-leaflet';
 import { Icon } from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 
@@ -12,6 +12,8 @@ require('./bootstrap');
 Vue.component('l-map', LMap);
 Vue.component('l-tile-layer', LTileLayer);
 Vue.component('l-marker', LMarker);
+Vue.component('l-grid-layer', LGridLayer);
+Vue.component('l-geo-json', LGeoJson);
 
 delete Icon.Default.prototype._getIconUrl;
 
