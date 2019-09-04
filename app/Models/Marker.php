@@ -11,7 +11,6 @@ class Marker extends Model
     use SoftDeletes;
 
     public $fillable = [
-        'address',
         'comment',
         'coordinates',
     ];
@@ -24,7 +23,7 @@ class Marker extends Model
         $bounding_box = $lb_latitude . ' ' .  $lb_longitude . ',' . $rt_latitude . ' ' . $rt_longitude;
 
         DB::statement("SET @polygon = ST_Envelope(ST_GeomFromText('LineString({$bounding_box})'))");
-        return $query->with(['types'])->selectRaw('id, address, comment, ST_AsGeoJSON(coordinates) as geometry')->whereRaw("ST_CONTAINS(@polygon, coordinates)");
+        return $query->with(['types'])->selectRaw('id, comment, ST_AsGeoJSON(coordinates) as geometry, created_at')->whereRaw("ST_CONTAINS(@polygon, coordinates)");
     }
 
     public function types()

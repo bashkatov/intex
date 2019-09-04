@@ -24,6 +24,9 @@ Route::group(
 //        'middleware' => 'auth:api'
     ], function () {
     Route::get('/markers', 'Api\MarkerController@index')->name('markers.index');
+    Route::get('/markers/create', 'Api\MarkerController@create')->name('markers.create');
+    Route::post('/markers', 'Api\MarkerController@store')->name('markers.store');
+    Route::get('/types', 'Api\TypeController@index')->name('types.index');
 });
 
 Route::fallback(function(){

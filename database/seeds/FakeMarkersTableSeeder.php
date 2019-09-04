@@ -12,6 +12,6 @@ class FakeMarkersTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Marker::class, 1000)->create();
+        factory(Marker::class, 100)->create();
     }
 }

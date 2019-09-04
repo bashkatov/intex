@@ -15,7 +15,6 @@ class CreateMarkersTable extends Migration
     {
         Schema::create('markers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('address', 255);
             $table->string('comment', 255)->nullable();
             $table->point('coordinates');
             $table->timestamps();

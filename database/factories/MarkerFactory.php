@@ -12,7 +12,6 @@ $factory->define(Marker::class, function (Faker $faker) {
     $longitude = $faker->longitude;
 
     return [
-        'address' => $faker->streetAddress,
         'comment' => $faker->realText(),
         'coordinates' => DB::raw("POINT({$latitude}, {$longitude})"),
         'created_at' => $faker->dateTimeThisMonth('now')
