@@ -62,11 +62,11 @@
                     longitude: this.longitude,
                 }).then(res => {
                     console.log(res)
+                    this.$toast.success(res.data.message, {position: 'top'})
                     this.$parent.addMarker(res.data.feature)
-                    // this.$parent.requestMarkers()
                     this.hide()
                 }).catch(error => {
-                    console.log(error)
+                    this.$toast.error(error.response.data.message, {position: 'top'})
                 })
             },
             clearForm (event) {

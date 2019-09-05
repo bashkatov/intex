@@ -35,10 +35,14 @@ class StoreRequest extends FormRequest
             'comment'   => [
                 'nullable',
             ],
-            'types.*'   => [
+            'types'   => [
+                'array',
                 'required',
+                'min:1'
+            ],
+            'types.*'   => [
                 'exists:types,id'
-            ]
+            ],
         ];
     }
 

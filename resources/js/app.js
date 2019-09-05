@@ -7,6 +7,8 @@ import 'leaflet/dist/leaflet.css'
 import VModal from 'vue-js-modal'
 import _ from 'lodash';
 import vSelect from 'vue-select'
+import VueToast from 'vue-toast-notification';
+import 'vue-toast-notification/dist/index.css';
 
 
 import App from './components/App';
@@ -20,6 +22,7 @@ Vue.component('l-grid-layer', LGridLayer);
 Vue.component('l-geo-json', LGeoJson);
 Vue.component('v-select', vSelect)
 Vue.use(VModal);
+Vue.use(VueToast);
 
 Object.defineProperty(Vue.prototype, '$_', { value: _ });
 

@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="efdd4989-d8c6-4c73-9cf0-5cef2f095efa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/MarkerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/MarkerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Marker/StoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Marker/StoreRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/modals/MarkerCreateModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/modals/MarkerCreateModal.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,10 +42,10 @@
           <entry key="js" value="29" />
           <entry key="json" value="9" />
           <entry key="md" value="1" />
-          <entry key="php" value="83" />
+          <entry key="php" value="84" />
           <entry key="scss" value="3" />
           <entry key="ts" value="2" />
-          <entry key="vue" value="11" />
+          <entry key="vue" value="12" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
@@ -55,10 +58,10 @@
           <entry key="JSON" value="9" />
           <entry key="JavaScript" value="29" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="76" />
+          <entry key="PHP" value="77" />
           <entry key="SCSS" value="3" />
           <entry key="TypeScript" value="2" />
-          <entry key="Vue.js" value="11" />
+          <entry key="Vue.js" value="12" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -66,13 +69,13 @@
         <counts>
           <entry key="dummy" value="18" />
           <entry key="env" value="31" />
-          <entry key="js" value="1063" />
+          <entry key="js" value="1065" />
           <entry key="json" value="15" />
           <entry key="md" value="60" />
-          <entry key="php" value="3823" />
+          <entry key="php" value="3873" />
           <entry key="scss" value="96" />
-          <entry key="txt" value="677" />
-          <entry key="vue" value="4840" />
+          <entry key="txt" value="692" />
+          <entry key="vue" value="4910" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -80,12 +83,12 @@
           <entry key=".env file" value="31" />
           <entry key="Blade" value="1024" />
           <entry key="JSON" value="15" />
-          <entry key="JavaScript" value="1063" />
+          <entry key="JavaScript" value="1065" />
           <entry key="Markdown" value="60" />
-          <entry key="PHP" value="2799" />
-          <entry key="PLAIN_TEXT" value="695" />
+          <entry key="PHP" value="2849" />
+          <entry key="PLAIN_TEXT" value="710" />
           <entry key="SCSS" value="96" />
-          <entry key="Vue.js" value="4840" />
+          <entry key="Vue.js" value="4910" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -100,7 +103,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/components/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1520">
+            <state relative-caret-position="570">
               <caret line="80" selection-start-line="80" selection-end-line="80" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -112,22 +115,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/MarkerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="944">
-              <caret line="68" column="53" selection-start-line="68" selection-start-column="53" selection-end-line="68" selection-end-column="53" />
+            <state relative-caret-position="-481">
+              <caret line="67" column="13" lean-forward="true" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="20" />
               <folding>
                 <element signature="e#44#86#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Marker.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
-              <folding>
-                <element signature="e#30#69#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -154,12 +145,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="95">
-                <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <first_editor relative-caret-position="152">
+                <caret line="8" selection-start-line="8" selection-end-line="8" />
               </first_editor>
               <second_editor />
             </state>
@@ -167,10 +158,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Requests/Marker/StoreRequest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/js/components/modals/MarkerCreateModal.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+            <state relative-caret-position="117">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
             </state>
           </provider>
         </entry>
@@ -196,8 +196,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+            <state relative-caret-position="432">
+              <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -234,6 +234,7 @@
       <find>multi</find>
       <find>modal</find>
       <find>tailwind</find>
+      <find>msg</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/resources/js</dir>
@@ -276,16 +277,16 @@
         <option value="$PROJECT_DIR$/database/factories/MarkerFactory.php" />
         <option value="$PROJECT_DIR$/app/Http/Resources/MarkerResource.php" />
         <option value="$PROJECT_DIR$/database/seeds/FakeMarkersTableSeeder.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Marker/StoreRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/MarkerController.php" />
         <option value="$PROJECT_DIR$/resources/sass/app.scss" />
-        <option value="$PROJECT_DIR$/resources/js/app.js" />
         <option value="$PROJECT_DIR$/resources/js/components/App.vue" />
-        <option value="$PROJECT_DIR$/resources/js/components/modals/MarkerCreateModal.vue" />
         <option value="$PROJECT_DIR$/app/Models/Marker.php" />
         <option value="$PROJECT_DIR$/app/Http/Resources/FeatureResource.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Marker/StoreRequest.php" />
+        <option value="$PROJECT_DIR$/resources/js/app.js" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/MarkerController.php" />
+        <option value="$PROJECT_DIR$/resources/js/components/modals/MarkerCreateModal.vue" />
       </list>
     </option>
   </component>
@@ -455,42 +456,6 @@
             <path>
               <item name="intex" type="b2602c69:ProjectViewProjectNode" />
               <item name="intex" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intex" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intex" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intex" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="factories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intex" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intex" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="seeds" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intex" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -513,12 +478,6 @@
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="modals" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intex" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="sass" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -587,7 +546,7 @@
       <workItem from="1567003328863" duration="6206000" />
       <workItem from="1567074924162" duration="59820000" />
       <workItem from="1567575371214" duration="30733000" />
-      <workItem from="1567661993068" duration="10597000" />
+      <workItem from="1567661993068" duration="13256000" />
     </task>
     <task id="LOCAL-00001" summary="get markers collection from DB and transform it to valid GeoJSON, using Resources;&#10;remove timestamp fields from types in markers collection;&#10;markers have popups;&#10;ModelNotFoundException in Handler;&#10;MarkerController;">
       <created>1567262803466</created>
@@ -617,24 +576,31 @@
       <option name="project" value="LOCAL" />
       <updated>1567678604101</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="readme update;">
+      <created>1567680585785</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1567680585785</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111955000" />
+    <option name="totallyTimeSpent" value="114614000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5984252" visible="true" weight="0.19291966" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5984252" visible="true" weight="0.19291966" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.4015748" side_tool="true" visible="true" weight="0.19291966" />
       <window_info id="DB Browser" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31053203" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31053203" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -673,7 +639,8 @@
     <MESSAGE value="Move logic from HomeComponent to App;" />
     <MESSAGE value="TypeController;&#10;store method in MarkerController;&#10;validate Marker store request;&#10;valid date format in FeatureResource;&#10;remove address column from markers table and all related places;&#10;reduce fake markers count;&#10;new marker modal dialog;&#10;App.vue big update;" />
     <MESSAGE value="fix comment in FeatureResource;&#10;migrate from vue-multiselect to vue-select;" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix comment in FeatureResource;&#10;migrate from vue-multiselect to vue-select;" />
+    <MESSAGE value="readme update;" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme update;" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
@@ -913,13 +880,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Marker/StoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/vue-multiselect/dist/vue-multiselect.min.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -934,33 +894,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1520">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/modals/MarkerCreateModal.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/MarkerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="944">
-          <caret line="68" column="53" selection-start-line="68" selection-start-column="53" selection-end-line="68" selection-end-column="53" />
-          <folding>
-            <element signature="e#44#86#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -980,16 +913,6 @@
           <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
           <folding>
             <element signature="e#38#56#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1018,10 +941,54 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="95">
-            <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <first_editor relative-caret-position="152">
+            <caret line="8" selection-start-line="8" selection-end-line="8" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Marker/StoreRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/MarkerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-481">
+          <caret line="67" column="13" lean-forward="true" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="20" />
+          <folding>
+            <element signature="e#44#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/modals/MarkerCreateModal.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
         </state>
       </provider>
     </entry>

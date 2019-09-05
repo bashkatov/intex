@@ -65,7 +65,7 @@ class MarkerController extends Controller
 
         return response()->json([
             'success' => true,
-            'msg'     => "Marker saved",
+            'message'     => "Marker saved",
             'feature' => new FeatureResource($marker)
         ], 200);
     }
