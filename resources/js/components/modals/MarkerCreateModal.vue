@@ -82,7 +82,7 @@
                 axios.get('/api/types').then((response) => {
                     this.categories = response.data
                 }).catch((error) => {
-                    console.log(error.response)
+                    this.$toast.error(error.response.data.message, {position: 'top'})
                 })
             },
         },

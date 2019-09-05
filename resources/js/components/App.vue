@@ -70,7 +70,7 @@
                 axios.get('/api/markers?bbox=' + this.bounds).then((response) => {
                     this.geojson = response.data
                 }).catch((error) => {
-                    console.log(error.response)
+                    this.$toast.error(error.response.data.message, {position: 'top'})
                 })
             },
             addMarker (feature) {

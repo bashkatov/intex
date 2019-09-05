@@ -1915,7 +1915,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       axios.get('/api/markers?bbox=' + this.bounds).then(function (response) {
         _this.geojson = response.data;
       })["catch"](function (error) {
-        console.log(error.response);
+        _this.$toast.error(error.response.data.message, {
+          position: 'top'
+        });
       });
     },
     addMarker: function addMarker(feature) {
@@ -2037,7 +2039,9 @@ __webpack_require__.r(__webpack_exports__);
       axios.get('/api/types').then(function (response) {
         _this2.categories = response.data;
       })["catch"](function (error) {
-        console.log(error.response);
+        _this2.$toast.error(error.response.data.message, {
+          position: 'top'
+        });
       });
     }
   }

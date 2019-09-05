@@ -28,7 +28,10 @@ class MarkerController extends Controller
             $markers = new MarkerResourceCollection(Marker::inBoundedBox($bbox)->get());
             return response()->json($markers);
         } else {
-            abort(400, 'No bound box coordinates');
+            return response()->json([
+                'success' => false,
+                'message'     => "No bound box coordinates",
+            ], 400);
         }
     }
 
