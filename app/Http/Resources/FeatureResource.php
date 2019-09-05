@@ -21,7 +21,7 @@ class FeatureResource extends JsonResource
             'properties' => [
                 'id'           => $this->id,
                 'created_date' => Carbon::createFromTimeString($this->created_at)->format('d.m.Y'),
-                'comment'      => $this->comment,
+                'comment'      => $this->comment ?: '',
                 'types'        => $this->types,
             ],
         ];

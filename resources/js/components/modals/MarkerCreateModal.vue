@@ -1,26 +1,22 @@
 <template>
-    <modal name="marker-create" transition="pop-out" @before-open="catchParams" @before-close="clearForm">
+    <modal name="marker-create" transition="pop-out" @before-open="catchParams" @before-close="clearForm"
+           :adaptive="true" width="50%" height="50%">
         <div class="flex mb-4">
-            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 w-full">
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2">
-                        Описание
-                    </label>
-                    <textarea v-model="comment" class="w-full border border-gray-300 rounded p-2 text-black"></textarea>
+            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 w-full h-screen">
+                <div class="pb-3">
+                    <p class="text-2xl font-bold">Новый маркер</p>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2">
                         Укажите категории
                     </label>
-                    <multiselect v-model="types"
-                                 placeholder="Искать категорию"
-                                 selectLabel="Нажмите Enter для подтверждения"
-                                 deselectLabel="Нажмите Enter для удаления"
-                                 label="name"
-                                 track-by="name"
-                                 :options="categories"
-                                 :multiple="true">
-                    </multiselect>
+                    <v-select multiple v-model="types" :options="categories" label="name" class="style-chooser"/>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">
+                        Описание
+                    </label>
+                    <textarea v-model="comment" class="w-full border border-gray-300 rounded p-2 text-black"></textarea>
                 </div>
                 <div class="flex items-center justify-between">
                     <button
@@ -39,11 +35,8 @@
 </template>
 <script>
 
-    import Multiselect from 'vue-multiselect'
-
     export default {
         name: 'MarkerCreateModal',
-        components: {Multiselect},
         data () {
             return {
                 types: null,
@@ -96,4 +89,3 @@
 
     }
 </script>
-

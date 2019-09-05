@@ -6,6 +6,8 @@ import { Icon } from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import VModal from 'vue-js-modal'
 import _ from 'lodash';
+import vSelect from 'vue-select'
+
 
 import App from './components/App';
 
@@ -16,6 +18,7 @@ Vue.component('l-tile-layer', LTileLayer);
 Vue.component('l-marker', LMarker);
 Vue.component('l-grid-layer', LGridLayer);
 Vue.component('l-geo-json', LGeoJson);
+Vue.component('v-select', vSelect)
 Vue.use(VModal);
 
 Object.defineProperty(Vue.prototype, '$_', { value: _ });
