@@ -1,4 +1,4 @@
-# intex
+# mapmarkers
 
 ## Installation
 
